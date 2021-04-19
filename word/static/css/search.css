@@ -1,0 +1,16 @@
+div.container-fluid{
+    height: 5em;
+}
+
+.search_keyword{
+    font-family : 'Nanum-R';
+    font-size: 18px;
+    text-align: center;
+    padding: 4% 5% 4%;
+}
+
+#empty{
+    font-family : 'Nanum-EB';
+    font-size: 30px;
+    text-align: center;
+}

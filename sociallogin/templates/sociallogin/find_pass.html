@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block header %}
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+<!--CSS-->
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/accountform.css' %}">
+
+{% endblock %}
+
+{% block content %}
+<!--div data-new-gr-c-s-check-loaded="14.1006.0" data-gr-ext-installed=""-->
+    <div class="account_div">
+        <div class="account_container" style=font-size:1.5em;>
+            <br>
+            <h1>비밀번호 초기화</h1>
+            <br>
+            <p>비밀번호를 잊으셨나요? 아래에 이메일을 아래에 입력해주시면 초기화 가능한 이메일을 보내드릴께요!</p>
+            <form method="POST" action="{% url 'account_password_reset'%}" class="password_reset">
+                {% csrf_token %}
+                <p><label for="id_email">E-mail:</label> <input type="email" name="email" placeholder="E-mail address"
+                        autocomplete="email" required="" id="id_email"></p>
+                <input type="submit" value="Reset My Password">
+            </form>
+            <p><br>문제가 있으면 연락주세요.</p>
+        </div>
+    </div>
+{% endblock %}
