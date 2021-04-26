@@ -63,6 +63,10 @@ a:hover {text-decoration: none; }
     margin: 0;
 }
 
+nav#nav_second.navbar{
+    border-bottom: groove;
+}
+
 .navbar_logo{
     font-family: 'SDSamliphopangche_Outline';
     font-size: 55px;
@@ -70,7 +74,6 @@ a:hover {text-decoration: none; }
     justify-content: center;
     width: 100%; 
     text-align: center;
-    border-bottom-style: groove;
 }
 
 .navbar_logo i{

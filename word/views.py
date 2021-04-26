@@ -10,7 +10,7 @@ def main(request):
 #아카이브 홈페이지
 def home(request):
     words = Word.objects.all()
-    return render(request, 'home.html', {'words' : words})
+    return render(request, 'home.html', {'words':words})
 
 #필터링
 def filter(request):

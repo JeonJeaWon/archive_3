@@ -18,8 +18,10 @@
 <div class="swiper_div">
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">Slide 1</div>
-			<div class="swiper-slide">Slide 2</div>
+			<div class="swiper-slide">
+				<img src="{% static 'home1.jpg' %}" alt="Slide1">
+			</div>
+			<div class="swiper-slide">slide 2</div>>
 			<div class="swiper-slide">Slide 3</div>
 			<div class="swiper-slide">Slide 4</div>
 			<div class="swiper-slide">Slide 5</div>
@@ -46,8 +48,8 @@
 				id="stb_subscribe_form" novalidate="">
 				<div class="apply_des">
 					<br><br>
-					<h1 class="stb_form_title" style=font-size:2em;>Froggii 구독하기</h1>
-					<p class="stb_form_description" style=font-size:1.5em;>FroGGii | 청년들의 성장 뉴스레터📰🌱🐸<br>🐸우물 밖
+					<h1 class="stb_form_title" style="font-size:2em;">Froggii 구독하기</h1>
+					<p class="stb_form_description" style="font-size:1.5em;">FroGGii | 청년들의 성장 뉴스레터📰🌱🐸<br>🐸우물 밖
 						개구리되기<br>🌱매주 월,수,금 프로거들을
 						찾아갑니다~!
 					</p>
@@ -57,13 +59,13 @@
 		<div class="apply_down">
 			<div class="apply_formset">
 				<fieldset class="stb_form_set">
-					<label for="stb_email" class="stb_form_set_label">이메일 주소</label>
+					<label for="stb_email" class="stb_form_set_label" style="font-size: 1.3em;">이메일 주소</label>
 					<input type="email" class="stb_form_set_input" id="stb_email" name="email">
 
 					<div class="stb_form_msg_error" id="stb_email_error"></div>
 				</fieldset>
 				<fieldset class="stb_form_set">
-					<label for="stb_name" class="stb_form_set_label">닉네임</label>
+					<label for="stb_name" class="stb_form_set_label" style="font-size: 1.3em;">닉네임</label>
 
 					<input type="text" class="stb_form_set_input" id="stb_name" name="name">
 					<div class="stb_form_msg_error" id="stb_name_error"></div>
@@ -95,7 +97,7 @@
 				<div class="stb_form_result" id="stb_form_result"></div>
 				<fieldset class="stb_form_set_submit">
 					<button type="submit" class="stb_form_submit_button" id="stb_form_submit_button"
-						style="background-color: rgb(207, 240, 218); color: rgb(58, 197, 105);">구독하기</button>
+						style="background-color: rgb(207, 240, 218); color: rgb(58, 197, 105); font-size: 1.5em;">구독하기</button>
 				</fieldset>
 			</div>
 			</form>
@@ -128,6 +130,6 @@
 			prevEl: '.swiper-button-prev',
 		},
 	});
-</script>
 
+</script>
 {% endblock %}

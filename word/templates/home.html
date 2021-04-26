@@ -5,13 +5,14 @@
 <!--CSS-->
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
 
 {% endblock %}
 
 {% block content %}
 
 <!--필터 버튼-->
-<div class="d-flex justify-content-center py-3">
+<div class="d-flex justify-content-center py-3" style="margin-left:1em;">
     <div class="row">
         <form action="{% url 'filter' %}" class="filter" method='GET'>
             <button type="submit" class="filter_item" name='hash_fi' value="경제">경제💰</button>
@@ -45,9 +46,6 @@
             <div class="title">{{word.title}}</div>
             <div class="date">{{word.pup_date}}</div>
             <div class="summary">{{word.summary}}</div>
-            <div class="hashtag">
-                {{word.hashtag}}
-            </div>
             <a class="link" href="{% url 'detail' word.id%}">....더보기</a>
             <a class="link" href="{% url 'delete' word.id %}"> 삭제</a>
             <a class="link" href="{% url 'edit' word.id %}"> 수정</a>

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     #provider : 어느 서버와 소통할지 결정(naver, google, facebook, kakaotalk, ...)
     'allauth.socialaccount.providers.naver',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [

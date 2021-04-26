@@ -61,6 +61,11 @@ a:hover {text-decoration: none; }
     align-items: center;
     padding: 0;
     margin: 0;
+    /*border-bottom: groove; 두개에 적용되는 문제점*/
+}
+
+nav#nav_second.navbar{
+    border-bottom: groove;
 }
 
 .navbar_logo{
@@ -70,7 +75,6 @@ a:hover {text-decoration: none; }
     justify-content: center;
     width: 100%; 
     text-align: center;
-    border-bottom-style: groove;
 }
 
 .navbar_logo i{
