@@ -11,38 +11,55 @@
 {% block content %}
 
 <!--첫번째 칸-->
-<div class="about_div">
-    <div class="about_container">
-        <br>
-        <br>
-        <div class="container marketing">
-            <!-- Three columns of text below the carousel -->
-            <div class="row">
-              <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        
-                <h2>Heading</h2>
-                <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                <p><a class="btn btn-secondary" href="#">View details »</a></p>
-              </div><!-- /.col-lg-4 -->
-              <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        
-                <h2>Heading</h2>
-                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                <p><a class="btn btn-secondary" href="#">View details »</a></p>
-              </div><!-- /.col-lg-4 -->
-              <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        
-                <h2>Heading</h2>
-                <p>And lastly this, the third column of representative placeholder content.</p>
-                <p><a class="btn btn-secondary" href="#">View details »</a></p>
-              </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
-    </div>
+<div class="about_div" style="height:38em;">
+  <div class="about_container">
+    <br>
+    <p style="font-size:4em;">ABOUT</p>
+    <p style="font-size:2em; font-style: italic;">"코로나로 인해 경험의 폭이 제한된 지금, 청년들은 어떻게 성장할 수 있을까요?"</p>
+    <p style="font-size:1.5em;">FroGGi는 이 질문에서 시작했습니다.</p>
+    <p style="font-size:1.5em;">코로나 19로 인해 많은 청년들은 고립되었고 성장의 기회는 제한되었습니다.</p>
+    <br>
+    <p style="font-size:1.5em;">하지만 이러한 시기에도 우물 밖에서 다양한 경험을 한 멘토들이 있습니다.</p>
+    <p style="font-size:1.5em;">그들과 고민을 함께 공유한다면 프로기들의 성장에 도움을 줄 수 있을 것이라고 생각하여 프로젝트를 시작하게 되었습니다.</p>
+    <p style="font-size:1.5em;">#우물 밖 개구리 #청년들의 성장 아카이브</p>
+    <p style="font-size:2em;">🐸 FroGGi 🌱</p>
+  </div>
 </div>
 
+<!--그림칸-->
+<div class="about_div">
+  <img src="{% static 'images/home1.jpg' %}" height="100%" alt="Slide1">
+</div>
 
+<!--두번째 칸-->
+<div class="about_div">
+  <div class="about_container">
+    <br>
+    <br>
+    <br>
+    <h1 style="font-size:4em; font-style: italic;">Vision</h1>
+    <br>
+    <p style="font-size:2.3em;">청년들의 성장을 돕기</p>
+    <p style="font-size:1.7em;">Help FroGGi Awake and Grow</p>
+  </div>
+</div>
+
+<!--그림칸-->
+<div class="about_div">
+  <img src="{% static 'images/home2.jpg' %}" height="100%" alt="Slide2">
+</div>
+
+<!--세번째 칸-->
+<div class="about_div">
+  <div class="about_container">
+    <br>
+    <br>
+    <br>
+    <h1 style="font-size:4em; font-style: italic;">Mission</h1>
+    <br>
+    <p style="font-size:2.3em;">만나고 공유하는 아카이브</p>
+    <p style="font-size:1.7em;">Meet people who Explore out of their comfort zone and share their experience</p>
+  </div>
+</div>
 
 {% endblock %}
