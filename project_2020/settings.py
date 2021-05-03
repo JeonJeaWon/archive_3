@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url #배포 관련 추가
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,15 +21,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','9^-*e-tkbg-mdcl$dz#&=m8_xjok#*frtswwari!n%!^-%mzg@') 
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','9^-*e-tkbg-mdcl$dz#&=m8_xjok#*frtswwari!n%!^-%mzg@')
+#secret key 삽입
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
-#DEBUG = bool(os.environ.get('DJANGO_DEBUG',True))배포관련
+#DEBUG = True (배포 전 활성화)
+DEBUG = bool(os.environ.get('DJANGO_DEBUG',True))
 
-ALLOWED_HOSTS = []
-#ALLOWED_HOSTS = ['*'] 배포관련
+#ALLOWED_HOSTS = [](배포 전)
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -55,7 +57,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    #'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', #배포 관련
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -98,6 +100,8 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config(conn_max_age=500) #배포 관련
+DATABASES['default'].update(db_from_env) #배포 관련
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
