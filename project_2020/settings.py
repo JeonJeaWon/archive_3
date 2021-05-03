@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import dj_database_url #배포 관련 추가
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -64,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware', #배포 관련
     'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
@@ -163,7 +162,6 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 #로그인에 성공했을 때 리다이렉트로 연결되는 URL 지정.
 
-#import dj_database_url
-
-#db_from_env = dj_database_url.config(conn_max_age=500)
-#DATABASES['default'].update(db_from_env) _배포시 추가 문구
+import dj_database_url #배포 관련
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env) _배포시 추가 문구
