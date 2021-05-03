@@ -164,4 +164,4 @@ LOGIN_REDIRECT_URL = '/'
 
 import dj_database_url #배포 관련
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env) _배포시 추가 문구
+DATABASES['default'].update(db_from_env) #배포시 추가 문구
